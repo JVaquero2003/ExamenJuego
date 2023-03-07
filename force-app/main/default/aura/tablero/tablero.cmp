@@ -1,17 +1,15 @@
 <aura:component controller="generarRandom">
     <aura:attribute name="numero" type="Integer" />
-    <aura:attribute name="colorear" type="String" />
     <table>
         <tr>
-            <td class="{!v.colorear}" aura:id="1"> <c:casilla /> </td>
-            <td class="{!v.colorear}" aura:id="2"> <c:casilla /> </td>
+            <td> <c:casilla aura:id="1" /> </td>
+            <td> <c:casilla aura:id="2" /> </td>
         </tr>
         <tr>
-            <td class="{!v.colorear}" aura:id="3"> <c:casilla /> </td>
-            <td class="{!v.colorear}" aura:id="4"> <c:casilla /> </td>
+            <td> <c:casilla aura:id="3" /> </td>
+            <td> <c:casilla aura:id="4" /> </td>
         </tr>
     </table>
-    {!v.colorear}
     {!v.numero}
     <lightning:button label="Play" onclick="{!c.callApex}" />
 </aura:component>	
