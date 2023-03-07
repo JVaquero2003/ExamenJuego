@@ -1,0 +1,3 @@
+<aura:component>
+    <input type="button" aura:id="1" class="{!v.var1}" onclick="{!c.comprobar1}" value="Play"/>
+</aura:component>	

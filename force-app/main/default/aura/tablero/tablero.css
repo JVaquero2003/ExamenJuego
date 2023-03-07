@@ -1,0 +1,28 @@
+.THIS {
+}
+
+.THIS .color {
+    background-color: rgb(0, 128, 0);
+    color: black;
+    border: 2px solid black;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+
+.THIS .limpia {
+    
+}
+
+.THIS td {
+    background-color: rgb(0, 128, 0);
+    width: 100px;   
+    height: 100px;
+}
+
+.THIS td input {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+}
