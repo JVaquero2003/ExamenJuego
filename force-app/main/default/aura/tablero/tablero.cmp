@@ -1,6 +1,15 @@
 <aura:component controller="generarRandom">
     <aura:attribute name="numero" type="Integer" />
+<<<<<<< Updated upstream
     <aura:attribute name="colorear" type="String" />
+=======
+    <aura:attribute name="numIntento" type="Integer"/>
+    <aura:attribute name="sumar" type="Boolean"/>
+    <aura:attribute name="score" type="Integer" default="0"/>
+
+
+    <aura:handler event="c:almacenarIntentos" action="{!c.aumentarContador}"/>
+>>>>>>> Stashed changes
     <table>
         <tr>
             <td class="{!v.colorear}" aura:id="1"> <c:casilla /> </td>
@@ -13,5 +22,8 @@
     </table>
     {!v.colorear}
     {!v.numero}
+    <br/>
+    <p>Score: {!v.score}</p>
+    <br/>
     <lightning:button label="Play" onclick="{!c.callApex}" />
 </aura:component>	

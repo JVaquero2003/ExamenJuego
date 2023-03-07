@@ -3,7 +3,12 @@
 
     },
     callApex : function(component, event, helper){
+        
+
         var action = component.get("c.generar");
+        var numIntento = event.getParam("numero");
+
+        component.set("v.numIntento", numIntento);
         action.setCallback(this, function(response){
             var state = response.getState();
             if(state === "SUCCESS"){
@@ -38,5 +43,16 @@
             }
         });
         $A.enqueueAction(action);
+    },
+    aumentarContador : function(component, event){
+        var acierto = event.getParam("sumar");
+        if (acierto){
+            var numScore = component.get("v.score");
+            component.set("v.score", numScore+1);
+        }
+        else{
+            alert("GameOver")
+            component.set("v.score", 0);
+        }
     }
 })

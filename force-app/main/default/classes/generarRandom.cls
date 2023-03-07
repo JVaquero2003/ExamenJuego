@@ -1,4 +1,6 @@
 public with sharing class generarRandom {
+    private static Integer ultimoNumeroGenerado = null;
+
     public generarRandom() {
 
     }
@@ -6,7 +8,12 @@ public with sharing class generarRandom {
     @AuraEnabled
     public static Integer generar(){
         try {
-            return Math.mod(Math.abs(Crypto.getRandomInteger()), 4) + 1;
+            Integer nuevoNumero;
+            do {
+                nuevoNumero = Math.mod(Math.abs(Crypto.getRandomInteger()), 4) + 1;
+            } while (nuevoNumero == ultimoNumeroGenerado);
+            ultimoNumeroGenerado = nuevoNumero;
+            return nuevoNumero;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }

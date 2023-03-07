@@ -1,3 +1,10 @@
 <aura:component>
+<<<<<<< Updated upstream
     <input type="button" aura:id="1" class="{!v.var1}" onclick="{!c.comprobar1}" value="Play"/>
+=======
+    <aura:attribute name="clase" type="string" />
+    <aura:attribute name="numIntento" type="Integer" default="0"/>
+
+    <input class="{!v.clase}" type="button" value="Play" onclick="{!c.recibirClic}"/>
+>>>>>>> Stashed changes
 </aura:component>	
